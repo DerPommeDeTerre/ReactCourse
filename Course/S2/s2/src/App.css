@@ -1,0 +1,49 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  background-color: rgb(33, 35, 43);
+}
+
+/* ----------NavBar---------- */
+.nav-container{
+  background-color: black;
+  color: rgb(145,227,248);
+}
+
+.nav-bar{
+  display: flex;
+  padding: 1rem;
+}
+
+.nav-bar h1{
+  padding-left: 1rem;
+}
+
+/* ----------Main---------- */
+.main-container{
+  padding: 1rem;
+  color: white;
+  font-weight: 300;
+
+  background-image: url(src/assets/react-logo-main1.png);
+  background-size: 8rem;
+  background-repeat: no-repeat;
+  background-position: 100% 75%;
+}
+
+.list li::marker{
+  color: rgb(145,227,248);
+  font-size: 1.3rem;
+}
+
+.list li{
+  padding-block: 0.2rem;
+  line-height: 1.3rem;
+}
