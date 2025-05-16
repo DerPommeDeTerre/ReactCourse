@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+
+*{
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* ----------Cards Main Container */
+.cards-main-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  
+  width: 100vw;
+}
+
+/* ---------- Card Container---------- */
+.card-container{
+  /* border: 1px solid black; */
+  width: 35vw;
+  height: auto;
+
+  position: relative;
+  padding: 0.7rem;
+  margin: 1rem;
+
+  border-radius: 1rem;
+
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 
+  
+  0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+  /* box-shadow: offset-x offset-y blur-radius spread-radius color;
+ */
+}
+
+.main-image{
+  width: 100%;
+  height: auto;
+  margin: 0;
+
+  border-radius: 1rem;
+}
+
+.card-container h3{
+  margin: 0.3rem 0;
+}
+
+/* ----------Info Container---------- */
+
+.info-container{
+  width: 100%;
+}
+
+.phone-info{
+  display: flex;
+  align-items: center;
+  padding-bottom: 0.5rem;
+}
+
+.phone-info p{
+  padding-left: 0.5rem;
+  margin: 0;
+}
+
+.phone-info img{
+  width: 1rem;
+  height: 1rem;
+}
+
+.mail-info{
+  display: flex;
+  align-items: center;
+}
+
+.mail-info img{
+  width: 1.2rem;
+  height: 1rem;
+}
+
+.mail-info p{
+  padding-left: 0.5rem;
+  margin: 0;
+  word-break: break-word;
+}
