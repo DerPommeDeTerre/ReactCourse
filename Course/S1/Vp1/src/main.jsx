@@ -9,13 +9,15 @@ import './Main.css'
 createRoot(document.getElementById('root')).render(
 
   <StrictMode>
-    <Page></Page>
+    <Page>
+    </Page>
     {/* <TemporaryName></TemporaryName> */}
     {/* <App /> */}
 
   </StrictMode>,
 )
 
+// eslint-disable-next-line react-refresh/only-export-components
 function Page(){
   return (
     <> 
