@@ -17,6 +17,7 @@ body{
     align-items: center;
     justify-content: center;
     background-color: rgb(246, 89, 90);
+    color: white;
 }
 
 .header-container img{
@@ -31,9 +32,10 @@ body{
 /*----------item-container----------*/
 .item-container{
     display: flex;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     padding: 1rem;
     align-items: center;
+    margin-bottom: 0.5rem;
 }
 
 .main-image-container{
@@ -48,11 +50,11 @@ body{
     height: 100%;
     width: 100%;
     object-fit: cover;
-    border: 1px solid orange;
+    /* border: 1px solid orange; */
 }
 
 .info-container{
-    border: 1px solid black;
+    /* border: 1px solid black; */
     margin-left: 1.5rem;
     width: 90%;
 }
@@ -62,7 +64,7 @@ body{
     align-items: center;
     gap: 0.5rem;
 
-    border: 1px solid green;
+    /* border: 1px solid green; */
 }
 
 .location p{
