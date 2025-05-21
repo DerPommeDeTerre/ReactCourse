@@ -2,7 +2,7 @@ import React from 'react'
 
 export const Main = () => {
 
-  const ingredients = ["Chicken", "Oregano", "Tomatoes"]
+  const [ingredients, setIngredients] = React.useState(["Chicken", "Oregano", "Tomatoes"])
   const ingredientsElements = ingredients.map(function(elements){
     return <li key = {elements}>{elements}</li>
   })
@@ -15,8 +15,12 @@ export const Main = () => {
     const newIngredient = formData.get("ingredient")//Retrieves value from the input "ingredient"
     console.log(newIngredient)
 
-    ingredients.push(newIngredient);
-    console.log(ingredients);
+    // ingredients.push(newIngredient);
+    // console.log(ingredients + "sdada");
+    
+    setIngredients(function(prevValue){
+      return [...prevValue, newIngredient]
+    })
   }
 
   return (
