@@ -25,7 +25,6 @@ export const Card = (props) => {
           <label htmlFor="">Salmon<input value="salmon" type="radio" name='color-option' onChange={changeHandle}/></label>
         </section>
         <p>This is a clock</p>
-
     </article>
   )
 }

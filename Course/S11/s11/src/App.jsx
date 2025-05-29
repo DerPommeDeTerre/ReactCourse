@@ -7,15 +7,37 @@ import React from 'react';
  */
 export const App = () => {
   function signUp(formData){//It's receiving the FORM DATA
-
-    const email = formData.get("email")
-    const password = formData.get("password")
-    console.log(password);
-    console.log(email);
-
-    const status = formData.get("employment-status")
-    console.log(status);
+    //console.log(Object.fromEntries(formData));//----------Utility to grab all the data
+    //We are passing all the entire form data object
+    const data = Object.fromEntries(formData);
+    console.log(data);
     
+    const dietaryRestrictions = formData.getAll("dietaryRestrictions")
+    console.log(dietaryRestrictions);
+
+    const allData = {
+      ...data, //Takes all the properties from data
+      dietaryRestrictions
+    }
+
+    console.log(allData);
+    
+    
+    
+    //---------Obtaining Data one by one
+    // const email = formData.get("email")
+    // const password = formData.get("password")
+    // console.log(password);
+    // console.log(email);
+
+    // const status = formData.get("employment-status")
+    // console.log(status);
+
+    // const dietaryRestrictions = formData.getAll("dietary-restrictions")//getAll to gather all checked elements
+    // console.log(dietaryRestrictions);
+    
+    // const favoriteColor = formData.get("favColor")
+    // console.log(favoriteColor);
   }
 // function handleSubmit(event){
 //   event.preventDefault()//Avoid refreshing
@@ -46,6 +68,7 @@ export const App = () => {
 
         <label htmlFor="description">Description: </label>
         <textarea defaultValue="This is a description" name="description" id="description"></textarea><br />
+        {/* ---------Input Radio---------- */}
         {/* To select only one RADIO, all name property has to be the same */}
         <fieldset>
           <legend>Employment Status:</legend>
@@ -54,9 +77,31 @@ export const App = () => {
             <label htmlFor=""><input value="full-time" defaultChecked={true} type="radio" name="employment-status"/>Full-time</label>
             {/* Default Checked is for selecting a value on radio options */}
         </fieldset>
-    
-        <br />name="employment-status"
-        <button>Submit</button>
+        <br />
+        {/* ----------Checkbox Input---------- */}
+        <fieldset>
+          <legend>Dietary Restrictions: </legend>
+          <label htmlFor=""><input type="checkbox" name="dietaryRestrictions" value="Kosher"/>Kosher</label>
+          <label htmlFor=""><input type="checkbox" name="dietaryRestrictions" value="Vegan"/>Vegan</label>
+          <label htmlFor=""><input type="checkbox" name="dietaryRestrictions" value="Gluten-Free" defaultChecked={true}/>Gluten-free</label>
+          </fieldset><br />
+
+          <label htmlFor="favColor">Select your favorite color: </label>
+          <select name="favColor" id="favColor" defaultValue="Blue" required>
+            {/* DISABLED is not an option */}
+            <option value="" disabled>Choose a color</option> 
+            <option value="red">Red</option>
+            <option value="orange">Orange</option>
+            <option value="yellow">Yellow</option>
+            <option value="green">Green</option>
+            <option value="blue">Blue</option>
+            <option value="indigo">Indigo</option>
+            <option value="violet">Violet</option>
+          </select>
+
+
+
+        <br /><button>Submit</button>
         
       </form>
     </section>
